@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../assets/fondo-bicicletas.avif);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+header{
+    text-align: center;
+    margin: 100px 0 30px 0;
+}
+
+main{
+    background-color:rgba(184, 135, 11, 0.479);
+    text-align: center;
+    padding: 30px 0;
+}
+
+main h1 {
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    width: 50%;
+    margin: 1% 25%;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.liBicicletas{
+    line-height: 1.6;
+}
+
+.oscuro {
+    background-image: url(../assets/oscuro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.boton {
+    margin: 10px;
+    background-color: rgb(184, 135, 11);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.boton:hover{
+    background-color: rgb(143, 105, 8);
+    transition: .4s;
+}
+
+.textInput{
+    background-color: rgb(172, 172, 172);
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+#catalogo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#divCompra {
+    margin-top: 30px;
+}
+
+#compra {
+    font-size: 25px;
+    margin: 30px 0;
+}

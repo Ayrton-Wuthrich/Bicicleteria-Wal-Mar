@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <h1 id="bienvenida"></h1>
+            <form action="grbarDatos" id="formGrabarDatos">
+                <div id="datosUsuario">
+                    <label class="etiquetaDeInput" for="nombre"><b>Nombre</b></label>
+                    <input class="textInput" id="inputNombre" type="text" placeholder="Ingrese su nombre" name="nombre" required>
+                    <label class="etiquetaDeInput"><b>Modo Oscuro</b></label>
+                    <label class="switch">
+                        <input type="checkbox" id="modoOscuro">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="boton">Grabar</button>
+                    <button id="recargar" type="submit" class="boton">Recargar Pagina</button>
+                </div>
+                </form>
+        </div>
+    </header>
+    <main>
+        <h1>COMPRA Y VENTAS DE BICICLETAS</h1>
+        <div>
+            <input class="textInput" id="formulario" type="text">
+            <button class="boton" id="btn-form" >Buscar</button>
+            <ul id="catalogo">
+
+            </ul>
+        </div>
+
+
+        <div id="divCompra">
+            <h3 id="compra">INGRESE LOS DATOS DE LA BICICLETA QUE QUIERE USTED VENDER</h3>
+            <div id="datos">
+                <input class="textInput" id="marcaBici" type="text" placeholder="marca">
+                <input class="textInput" id="colorBici" type="text" placeholder="color">
+                <input class="textInput" id="rodadoBici" type="number" placeholder="rodado">
+                <input class="textInput" id="precioBici" type="number" placeholder="precio">
+                <input class= "boton" type="button" name="Enviar" value="Enviar" onclick="recibir();">
+            </div>
+        </div> 
+    </main>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
