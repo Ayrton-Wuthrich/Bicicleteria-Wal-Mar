@@ -2,152 +2,184 @@
 
 const bicicletas = [{
     producto: 1,
-    marca: "vairo",
+    marca: "Vairo",
     color: "verde, cian, negro",
     rodado: "29",
-    precio: "78000"
+    precio: "$78000",
+    imagen : "assets/bicicleta1.png"
 },
 {
     producto: 2,
-    marca: "trek",
+    marca: "Trek",
     color: "azul",
     rodado: "29",
-    precio: "65000"
+    precio: "$65000",
+    imagen : "assets/Trek-azul-29.webp"
 },
 {
     producto: 3,
-    marca: "trek",
+    marca: "Trek",
     color: "roja",
     rodado: "29",
-    precio: "65000"
+    precio: "$65000",
+    imagen : "assets/Trek-roja-29.webp"
 },
 {
     producto: 4,
-    marca: "vairo metro",
+    marca: "Vairo/metro",
     color: "blanca",
     rodado: "26",
-    precio: "83000"
+    precio: "$83000",
+    imagen : "assets/Vairo-Metro_Blanca-26.webp"
 },
 {
     producto: 5,
-    marca: "vairo",
+    marca: "Vairo",
     color: "gris, negro, verde",
     rodado: "26",
-    precio: "45000"
+    precio: "$45000",
+    imagen : "assets/Vairo-gris-negro-verde-26.png"
 },
 {
     producto: 6,
-    marca: "scott",
+    marca: "Scott",
     color: "celeste",
     rodado: "29",
-    precio: "77000"
+    precio: "$77000",
+    imagen : "assets/Scott-celeste-29.png"
 },
 {
     producto: 7,
-    marca: "firebird",
+    marca: "FireBird",
     color: "naranja",
     rodado: "29",
-    precio: "71000"
+    precio: "$71000",
+    imagen : "assets/FireBird_naranja-29.jpg"
 },
 {
     producto: 8,
-    marca: "firebird",
+    marca: "FireBird",
     color: "negra",
     rodado: "29",
-    precio: "71000"
+    precio: "$71000",
+    imagen : "assets/FireBird_negra-29.jpg"
 },
 {
     producto: 9,
-    marca: "scott",
+    marca: "Scott",
     color: "amarilla",
     rodado: "29",
-    precio: "77000"
+    precio: "$77000",
+    imagen : "assets/Scott-amarilla-29.png"
 },
 {
     producto: 10,
-    marca: "raleigh",
+    marca: "Raleigh",
     color: "roja",
     rodado: "29",
-    precio: "82000"
+    precio: "$82000",
+    imagen : "assets/Raleigh-roja-29.jpg"
 },
 {
     producto: 11,
-    marca: "scott",
+    marca: "Scott",
     color: "negra",
     rodado: "29",
-    precio: "77000"
+    precio: "$77000",
+    imagen : "assets/Scott-negra-29.png"
 },
 {
     producto: 12,
-    marca: "raleigh",
+    marca: "Raleigh",
     color: "blanca",
     rodado: "26",
-    precio: "41000"
+    precio: "$41000",
+    imagen : "assets/Raleigh-blanca-26.webp"
 },
 {
     producto: 13,
-    marca: "moove",
+    marca: "Moove",
     color: "verde",
     rodado: "29",
-    precio: "68000"
+    precio: "$68000",
+    imagen : "assets/Moove-verde-29.jpg"
 },
 {
     producto: 14,
-    marca: "raleigh",
+    marca: "Raleigh",
     color: "azul",
     rodado: "29",
-    precio: "82000"
+    precio: "$82000",
+    imagen : "assets/Raleigh-azul-29.jpg"
 },
 {
     producto: 15,
-    marca: "moove",
+    marca: "Moove",
     color: "azul, negra",
     rodado: "29",
-    precio: "68000"
+    precio: "$68000",
+    imagen : "assets/Moove-azul-negra-29.jpg"
 },
 {
     producto: 16,
-    marca: "vairo",
+    marca: "Vairo",
     color: "negra, naranja",
     rodado: "29",
-    precio: "78000"
+    precio: "$78000",
+    imagen : "assets/Vairo-negro-naranja-29.webp"
 },
 {
     producto: 17,
-    marca: "vairo",
+    marca: "Vairo",
     color: "negra, verde",
     rodado: "29",
-    precio: "78000"
+    precio: "$78000",
+    imagen : "assets/Vairo-negro-verde-29.webp"
 },
 {
     producto: 18,
-    marca: "raleigh",
+    marca: "Raleigh",
     color: "negra, roja",
     rodado: "29",
-    precio: "82000"
+    precio: "$82000",
+    imagen : "assets/Raleigh-negra-roja-29.jpg"
 },
 {
     producto: 19,
-    marca: "firebird",
+    marca: "FireBird",
     color: "negra, verde",
     rodado: "29",
-    precio: "71000"
+    precio: "$71000",
+    imagen : "assets/FireBird_negro-verde-29.jpg"
 },
 {
     producto: 20,
-    marca: "firebird",
+    marca: "FireBird",
     color: "roja",
     rodado: "26",
-    precio: "38000"
+    precio: "$38000",
+    imagen : "assets/FireBird_roja-26.jpg"
 },
 {
     producto: 21,
-    marca: "moove",
+    marca: "Moove",
     color: "azul, negra",
     rodado: "29",
-    precio: "68000"
+    precio: "$68000",
+    imagen : "assets/Moove-azul-negra-29.jpg"
 }
 ]
+
+const nuevaBicicleta = {
+    producto: 22,
+    marca: "Volta",
+    color: "blanca",
+    rodado: "29",
+    precio: "$135000",
+    imagen: "assets/Volta-blanca-29.jpg"
+}
+
+bicicletas.push(nuevaBicicleta);
 
 const formulario = document.querySelector("#formulario")
 const boton = document.querySelector("#btn-form")
@@ -169,7 +201,15 @@ const filtrar = () => {
 
         if(nombre.indexOf(texto) !== -1 || nombreColor.indexOf(texto) !== -1 || nombreRodado.indexOf(texto) !== -1 || nombrePrecio.indexOf(texto) !== -1){
             catalogo.innerHTML += `
-            <li class="liBicicletas">Marca: ${bicicleta.marca} - Color: ${bicicleta.color} - Rodado: ${bicicleta.rodado} - Precio: ${bicicleta.precio}</li>
+            <li class="liBicicletas card">
+                <img src="${bicicleta.imagen}" alt="Imagen de ${bicicleta.marca}">
+                <div class="descripcion">
+                    <p>Marca: ${bicicleta.marca}</p>
+                    <p>Color: ${bicicleta.color}</p>
+                    <p>Rodado: ${bicicleta.rodado}</p>
+                    <p>Precio: ${bicicleta.precio}</p>
+                </div>
+            </li>
             `
         }
     }
@@ -209,62 +249,6 @@ function recibir(){
     document.write("<br> El precio del IVA de la bicicleta es de: $"+precioIva + "<br> El costo de envio mas mantenimiento de la bicicleta es de : $" +precioMantenimiento + "<br> El total de todo es de : $"+precioTotal)
 }
 
-// // USUARIO 
-
-// class Cliente {
-//     constructor(nombre, darkMode){
-//         this.nombre = nombre
-//         this.darkMode = darkMode
-//     }
-//     setNombre(nuevoCliente){
-//         if(nombre != ''){
-//             this.nombre = nuevoCliente
-//         }
-//     }
-//     setDarkMode(newMode){
-//         this.darkMode = newMode
-//     }
-// }
-
-// let objetoLocalStorage = JSON.parse(localStorage.getItem("cliente"))
-
-// if (objetoLocalStorage){
-//     let cliente = new Cliente(objetoLocalStorage.nombre, objetoLocalStorage.darkMode)
-
-//     valoresClientes(cliente)
-//     activeDarkMode(objetoLocalStorage.darkMode)
-// } else{
-//     let cliente = new Cliente('', false)
-//     valoresClientes(cliente)
-// }
-
-
-// // MODO OSCURO
-
-// document.getElementById("darkMode").addEventListener('change', activeDarkMode)
-// document.getElementById("formGrabarDatos").addEventListener("submit", grabarDatos);
-// document.getElementById("recargar").addEventListener('click', ()=>{
-//     location.reload();
-// })
-// function activeDarkMode() {
-//     if (document.getElementById("darkMode").checked) {
-//         document.main.className = "oscuro"
-//     } else {
-//         document.main.removeAttribute('class');
-//     }
-// }
-
-// function asignarValoresAlosInputs(cliente) {
-//     if (cliente.nombre != '') {
-//         document.getElementById("bienvenida").innerHTML = `Gracias por ingresar nuevamente a nuestra pagina ${cliente.nombre}, aqui puedes modificar tus datos`
-//         document.getElementById("inputNombre").value = cliente.nombre
-//         document.getElementById("darkMode").checked = cliente.modoOscuro
-//     } else {
-//         document.getElementById("bienvenida").innerHTML = `Hola, bienvenido/a a nuestra pagina de compra y ventas de bicicletas, nos gustaria saber tu nombre.`
-//     }
-// }
-
-
 
 class Usuario {
     constructor(nombre, modoOscuro) {
@@ -281,12 +265,12 @@ class Usuario {
     }
 }
 
-let objectoLocalStorage = JSON.parse(localStorage.getItem("usuario")) //busco en localStorage el objeto y hago un parse para que JS me devuelva un objeto
+let objectoLocalStorage = JSON.parse(localStorage.getItem("usuario"))
 
 console.log("objectoLocalStorage ===>")
 console.log(objectoLocalStorage)
 
-if (objectoLocalStorage) { //Si Nombre tiene contenido, entonces lo muestro
+if (objectoLocalStorage) {
     let usuario = new Usuario(objectoLocalStorage.nombre, objectoLocalStorage.modoOscuro)
 
     console.log("usuario ===>")
@@ -300,13 +284,12 @@ if (objectoLocalStorage) { //Si Nombre tiene contenido, entonces lo muestro
     asignarValoresAlosInputs(usuario)
 }
 
-document.getElementById("modoOscuro").addEventListener('change', activarModoOscuro) //Ecucho cuando hay cambios en el check de modo oscuro
+document.getElementById("modoOscuro").addEventListener('change', activarModoOscuro)
 document.getElementById("formGrabarDatos").addEventListener("submit", grabarDatos);
 document.getElementById("recargar").addEventListener('click', ()=>{
-    location.reload(); //Con este metodo podemos recargar la pagina
+    location.reload();
 })
 function grabarDatos(e) {
-    //Cancelamos el comportamiento del evento
     e.preventDefault();
     let valorInputNombre = document.getElementById("inputNombre").value
     let valorInputModoOscuro = document.getElementById("modoOscuro").checked

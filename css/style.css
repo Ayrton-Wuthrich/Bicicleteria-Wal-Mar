@@ -9,7 +9,7 @@
 body{
     background-image: url(../assets/fondo-bicicletas.avif);
     background-size: auto;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 header{
@@ -32,14 +32,52 @@ main h1 {
     text-align: center;
 }
 
-.liBicicletas{
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 2% 5%;
+}
+
+.liBicicletas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.liBicicletas img {
+    width: 300px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.descripcion{
+    font-size: 25px;
+    margin-right: 30px;
     line-height: 1.6;
+}
+
+.card {
+    background-color: rgb(184, 135, 11);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    color: black;
 }
 
 .oscuro {
     background-image: url(../assets/oscuro.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     color: white;
 }
 
