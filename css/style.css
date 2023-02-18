@@ -1,122 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #4b33a8;
+    --clr-footer: #7d68d3; 
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+    --clr-hover-button: #704cfc; 
+    --clr-venta-creada: #7866bf;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
 }
 
-body{
-    background-image: url(../assets/fondo-bicicletas.avif);
-    background-size: auto;
-    background-repeat: repeat-y;
-}
-
-header{
-    text-align: center;
-    margin: 100px 0 30px 0;
-}
-
-main{
-    text-align: center;
-    padding: 30px 0;
-}
-
-main h1 {
-    background-color: cornflowerblue;
-    border-radius: 10px;
-    width: 50%;
-    margin: 1% 25%;
-    padding: 8px 16px;
-    text-align: center;
+h1, h2, h3, h4, h5, h6, p, a, input, textarea{
+    margin: 0;
+    padding: 0;
 }
 
 ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.wrapper{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin: 2% 5%;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--clr-main);
 }
 
-.liBicicletas {
+aside{
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    width: 80%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
 }
 
-.liBicicletas img {
-    width: 300px;
-    height: 200px;
-    margin-right: 10px;
+.logo{
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
-.descripcion{
-    font-size: 25px;
-    margin-right: 30px;
-    line-height: 1.6;
-}
-
-.card {
-    background-color: rgb(184, 135, 11);
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+.menu{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px;
-    padding: 10px;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.oscuro {
-    background-image: url(../assets/oscuro.jpg);
-    background-size: cover;
-    background-repeat: repeat-y;
-    color: white;
-}
-
-.boton {
-    margin: 10px;
-    background-color: rgb(184, 135, 11);
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.boton:hover{
-    background-color: rgb(143, 105, 8);
-    transition: .4s;
-}
-
-.textInput{
-    background-color: rgb(172, 172, 172);
-    padding: 6px 10px;
-    font-size: 14px;
-}
-
-#catalogo {
-    font-size: 18px;
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
     font-weight: 600;
 }
 
-#divVenta {
-    margin-top: 30px;
-    background-color: rgb(184, 135, 11);
-    width: 80%;
-    margin: 5% 10%;
-    padding: 10px;
-    border-radius: 10px;
+.active{
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
 }
 
-#venta {
-    font-size: 25px;
-    margin: 30px 0;
+.boton-menu.active::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: var(--clr-main);
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
 }
 
-.textInput{
-    margin: 0 10px;
+.boton-menu.active::after{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: var(--clr-main);
+    border-top-right-radius: 1rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
+.bi-hand-index-thumb-fill{
+    transform: rotateZ(90deg);
+}
+
+.numerito{
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.texto-footer{
+    color: var(--clr-footer);
+    font-size: .80rem;
+}
+
+main{
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.titulo-principal{
+    color: var(--clr-main);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.buscador{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buscador-general{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.buscador-orden{
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.textInput {
+    border: 1px solid var(--clr-main);
+    border-radius: 1rem;
+    padding: .3rem;
+}
+
+.boton-buscar {
+    border: 1px solid var(--clr-main);
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: .3rem;
+}
+
+.boton-buscar:hover {
+    border: 1px solid var(--clr-white);
+    background-color: var(--clr-main);
+    transition: .3s;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.producto-imagen{
+    width: 100%;
+    height: 250px;
+    border-radius: 1rem;
+}
+
+.producto-detalles{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.producto-titulo{
+    font-size: 1rem;
+}
+
+.producto-agregar{
+    border: 0;
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-white);
+}
+
+.producto-agregar:hover{
+    background-color: var(--clr-hover-button);
+    color: var(--clr-white);
+    transition: .3s;
+}
+
+/** CARRITO **/
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-vacio,
+.carrito-comprado{
+    color: var(--clr-main);
+}
+
+.carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrito-producto{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray);
+    color: var(--clr-main);
+    padding: .5rem;
+    border-radius: 1rem;
+
+}
+
+.carritoAlmacenamiento{
+    text-align: center;
+}
+
+.carrito-producto-imagen{
+    width: 4rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto small {
+    font-size: .75rem;
+}
+
+.carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+}
+
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar{
+    border: 0;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carrito-acciones-derecha{
+    display: flex;
+
+}
+
+.carrito-acciones-total{
+    display: flex;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+}
+
+.carrito-acciones-comprar{
+    border: 0;
+    background-color: var(--clr-main);
+    padding: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+.disabled{
+    display: none;
+}
+
+
+/* VENTA DE BICICLETA USADA */
+
+.divVenta {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.divVenta h3{
+    color: var(--clr-venta-creada);
+    line-height: 1.6;
+    margin-top: 3rem;
+    border: 2px solid var(--clr-main);
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+
+#venta{
+    font-size: 2rem;
+    color: var(--clr-main);
+}
+
+#datos{
+    margin-top: 2rem;
+}
+
+.textInputVentas{
+    border: 1px solid var(--clr-main);
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.animate__backInLeft{
+    transition: 2s;
+    transition-delay: 1s;
 }

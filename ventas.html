@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-
     <div class="wrapper">
         
         <aside class="animate__backInLeft">
@@ -21,9 +19,9 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <button class="boton-menu boton-categoria active">
-                            <i class="bi bi-hand-index-thumb-fill"></i>Productos
-                        </button>
+                        <a class="boton-menu boton-volver" href="./index.html">
+                        <i class="bi bi-hand-index-thumb-fill"></i>Productos
+                        </a>
                     </li>
                     <li>
                         <a class="boton-menu boton-carrito" href="./carrito.html">
@@ -31,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  class="boton-menu boton-ventas" href="./ventas.html">
+                        <a  class="boton-menu boton-ventas active" href="./ventas.html">
                             <i class="bi bi-bicycle"></i>Vendenos tu bicicleta
                         </a>
                     </li>
@@ -43,28 +41,21 @@
         </aside>
 
         <main>
-            <h2 class="titulo-principal">COMPRA Y VENTA DE BICICLETAS</h2>
-            <div class="buscador">
-                <div class="buscador-general">
-                    <input class="textInput" id="formulario" type="text">
-                    <button class="boton-buscar" id="btn-form" >Buscar</button>
+            <h2 class="titulo-principal"  >VENDENOS TU BICICLETA USADA</h2>
+            <div id="divVenta" class="divVenta">
+                <h2 id="venta">INGRESE LOS DATOS DE LA BICICLETA QUE QUIERE USTED VENDER</h2>
+                <div id="datos">
+                    <input class="textInputVentas" id="marcaBici" type="text" placeholder="marca">
+                    <input class="textInputVentas" id="colorBici" type="text" placeholder="color">
+                    <input class="textInputVentas" id="rodadoBici" type="number" placeholder="rodado">
+                    <input class="textInputVentas" id="precioBici" type="number" placeholder="precio">
+                    <input class= "boton-buscar" type="button" name="Enviar" value="Enviar" onclick="recibir();">
                 </div>
-                <div class="buscador-orden">
-                <h4>Orden de precios</h4>
-                    <select class="textInput" name="" id="boton-orden">
-                        <option value=""></option>
-                        <option value="Min/Max">Descendente</option>
-                        <option value="Max/Min">Ascendente</option>
-                    </select>
-                </div>
-            </div>
-            <div id="contenedor-productos" class="contenedor-productos">
-                
-            </div>
+            </div> 
         </main>
 
     </div>
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/ventas.js"></script>
 </body>
 </html>
