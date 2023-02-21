@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #4b33a8;
-    --clr-footer: #7d68d3; 
+    --clr-main: #0579B6;
+    --clr-footer: #0c5075; 
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
     --clr-red: #961818;
-    --clr-hover-button: #704cfc; 
-    --clr-venta-creada: #7866bf;
+    --clr-hover-button: #6ea7c5; 
+    --clr-venta-creada: #0c98e4;
+    --clr-toastify: #013f61 #5892b0;
 }
 
 *{
@@ -50,7 +51,7 @@ aside{
 }
 
 .logo{
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.3rem;
     text-align: center;
 }
@@ -120,6 +121,17 @@ aside{
 .texto-footer{
     color: var(--clr-footer);
     font-size: .80rem;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem;
+    margin-left: 0;
+}
+
+.redes-img{
+    height: 2.5rem;
 }
 
 main{

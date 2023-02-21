@@ -1,185 +1,25 @@
+// FETCH
+
+let bicicletas = [];
+
+fetch('./js/data.json')
+    .then(response => response.json())
+    .then(data => {
+        bicicletas = data;
+        cargarProductos(bicicletas);
+        const nuevaBicicleta = {
+            "id": 22,
+            "marca": "Volta",
+            "color": "blanca",
+            "rodado": "29",
+            "precio": "135000",
+            "imagen": "assets/Volta-blanca-29.jpg"
+        }
+        bicicletas.push(nuevaBicicleta);
+    })
+
 //COMPRAS
 
-const bicicletas = [{
-    "id": 1,
-    marca: "Vairo",
-    color: "verde, cian, negro",
-    rodado: "29",
-    precio: "78000",
-    imagen: "assets/bicicleta1.webp"
-},
-{
-    "id": 2,
-    marca: "Trek",
-    color: "azul",
-    rodado: "29",
-    precio: "65000",
-    imagen: "assets/Trek-azul-29.jpg"
-},
-{
-    "id": 3,
-    marca: "Trek",
-    color: "roja",
-    rodado: "29",
-    precio: "65000",
-    imagen: "assets/Trek-roja-29.jpg"
-},
-{
-    "id": 4,
-    marca: "Vairo/metro",
-    color: "blanca",
-    rodado: "26",
-    precio: "83000",
-    imagen: "assets/Vairo-Metro_Blanca-26.webp"
-},
-{
-    "id": 5,
-    marca: "Vairo",
-    color: "gris, negro, verde",
-    rodado: "26",
-    precio: "45000",
-    imagen: "assets/Vairo-gris-negro-verde-26.jpg"
-},
-{
-    "id": 6,
-    marca: "Scott",
-    color: "celeste",
-    rodado: "29",
-    precio: "77000",
-    imagen: "assets/Scott-celeste-29.png"
-},
-{
-    "id": 7,
-    marca: "FireBird",
-    color: "naranja",
-    rodado: "29",
-    precio: "71000",
-    imagen: "assets/FireBird_naranja-29.jpg"
-},
-{
-    "id": 8,
-    marca: "FireBird",
-    color: "negra",
-    rodado: "29",
-    precio: "71000",
-    imagen: "assets/FireBird_negra-29.jpg"
-},
-{
-    "id": 9,
-    marca: "Scott",
-    color: "amarilla",
-    rodado: "29",
-    precio: "77000",
-    imagen: "assets/Scott-amarilla-29.png"
-},
-{
-    "id": 10,
-    marca: "Raleigh",
-    color: "roja",
-    rodado: "29",
-    precio: "82000",
-    imagen: "assets/Raleigh-roja-29.jpg"
-},
-{
-    "id": 11,
-    marca: "Scott",
-    color: "negra",
-    rodado: "29",
-    precio: "77000",
-    imagen: "assets/Scott-negra-29.png"
-},
-{
-    "id": 12,
-    marca: "Raleigh",
-    color: "blanca",
-    rodado: "26",
-    precio: "41000",
-    imagen: "assets/Raleigh-blanca-26.webp"
-},
-{
-    "id": 13,
-    marca: "Moove",
-    color: "verde",
-    rodado: "29",
-    precio: "68000",
-    imagen: "assets/Moove-verde-29.jpg"
-},
-{
-    "id": 14,
-    marca: "Raleigh",
-    color: "azul",
-    rodado: "29",
-    precio: "82000",
-    imagen: "assets/Raleigh-azul-29.jpg"
-},
-{
-    "id": 15,
-    marca: "Moove",
-    color: "azul, negra",
-    rodado: "29",
-    precio: "68000",
-    imagen: "assets/Moove-azul-negra-29.jpg"
-},
-{
-    "id": 16,
-    marca: "Vairo",
-    color: "negra, naranja",
-    rodado: "29",
-    precio: "78000",
-    imagen: "assets/Vairo-negro-naranja-29.jpg"
-},
-{
-    "id": 17,
-    marca: "Vairo",
-    color: "negra, verde",
-    rodado: "29",
-    precio: "78000",
-    imagen: "assets/Vairo-negro-verde-29.webp"
-},
-{
-    "id": 18,
-    marca: "Raleigh",
-    color: "negra, roja",
-    rodado: "29",
-    precio: "82000",
-    imagen: "assets/Raleigh-negra-roja-29.jpg"
-},
-{
-    "id": 19,
-    marca: "FireBird",
-    color: "negra, verde",
-    rodado: "29",
-    precio: "71000",
-    imagen: "assets/FireBird_negro-verde-29.jpg"
-},
-{
-    "id": 20,
-    marca: "FireBird",
-    color: "roja",
-    rodado: "26",
-    precio: "38000",
-    imagen: "assets/FireBird_roja-26.jpg"
-},
-{
-    "id": 21,
-    marca: "Moove",
-    color: "azul, negra",
-    rodado: "29",
-    precio: "68000",
-    imagen: "assets/Moove-azul-negra-29.jpg"
-}
-]
-
-const nuevaBicicleta = {
-    "id": 22,
-    marca: "Volta",
-    color: "blanca",
-    rodado: "29",
-    precio: "135000",
-    imagen: "assets/Volta-blanca-29.jpg"
-}
-
-bicicletas.push(nuevaBicicleta);
 
 const contenedorProductos = document.querySelector('#contenedor-productos');
 
@@ -252,7 +92,6 @@ botonOrden.addEventListener('change', () => {
 boton.addEventListener("click", cargarProductos)
 formulario.addEventListener("keyup", cargarProductos)
 
-cargarProductos();
 
 
 let guardarBicicletas = (clave, valor) => { localStorage.setItem(clave, valor) }
@@ -283,6 +122,23 @@ if (productosEnCarritoLS) {
 
 
 function agregarAlCarrito(e) {
+
+    Toastify({
+        text: "Bicicleta agregada al carrito",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #013f61, #5892b0)",
+          borderRadius: "1rem",
+        },
+        onClick: function(){}
+      }).showToast();
+
     const idBoton = parseInt(e.currentTarget.id);
     const productosAgregados = bicicletas.find(producto => producto.id === idBoton);
 
@@ -306,7 +162,7 @@ function actualizarNumerito() {
 }
 
 
-// DESCUENTO
+// DESCUENTO DE LOS JUEVES
 
 
 setTimeout(() =>{

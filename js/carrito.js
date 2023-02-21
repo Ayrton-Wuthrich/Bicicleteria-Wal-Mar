@@ -89,6 +89,7 @@ function eliminarDelCarrito(e) {
 botonVaciar.addEventListener('click', vaciarCarrito);
 
 function vaciarCarrito() {
+
     productosEnCarrito.length = 0;
     localStorage.setItem("producto-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
@@ -106,6 +107,14 @@ function actualizarTotal() {
 botonComprar.addEventListener('click', comprarCarrito);
 
 function comprarCarrito() {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'COMPRA REALIZADA CON EXITO',
+        text: "Muchas gracias por su compra, vuelva pronto!!!",
+        showConfirmButton: false,
+        timer: 2000
+      })
     productosEnCarrito.length = 0;
     localStorage.setItem("producto-en-carrito", JSON.stringify(productosEnCarrito));
 
