@@ -32,10 +32,10 @@
 {
     "id": 5,
     "marca": "Vairo",
-    "color": "gris, negro, verde",
+    "color": "azul",
     "rodado": "26",
     "precio": "45000",
-    "imagen" : "assets/Vairo-gris-negro-verde-26.jpg"
+    "imagen" : "assets/Vairo-azul-26.jpg"
 },
 {
     "id": 6,
@@ -131,7 +131,7 @@
     "color": "negra, verde",
     "rodado": "29",
     "precio": "78000",
-    "imagen" : "assets/Vairo-negro-verde-29.webp"
+    "imagen" : "assets/Vairo-negro-verde-29.jpg"
 },
 {
     "id": 18,
